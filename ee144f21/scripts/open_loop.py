@@ -14,13 +14,16 @@ class Turtlebot():
 
 
     def run(self):
-        turning_range = 35
+        turning_range = 34
+        #35 30 33(worked well)
+        forward_range =  78
+        #100(too far) 80(close) 81 82 83(little too far)
         vel = Twist()
         #goes forward
         vel.linear.x = 0.5
         vel.angular.z = 0
         #while not rospy.is_shutdown():  # uncomment to use while loop
-        for i in range(50):
+        for i in range(forward_range):
             self.vel_pub.publish(vel)
             self.rate.sleep()
         
@@ -35,7 +38,7 @@ class Turtlebot():
         vel.linear.x = 0.5
         vel.angular.z = 0
         #while not rospy.is_shutdown():  # uncomment to use while loop
-        for i in range(50):
+        for i in range(forward_range):
             self.vel_pub.publish(vel)
             self.rate.sleep()
         
@@ -51,7 +54,7 @@ class Turtlebot():
         vel.linear.x = 0.5
         vel.angular.z = 0
         #while not rospy.is_shutdown():  # uncomment to use while loop
-        for i in range(50):
+        for i in range(forward_range):
             self.vel_pub.publish(vel)
             self.rate.sleep()
 
@@ -66,7 +69,7 @@ class Turtlebot():
         vel.linear.x = 0.5
         vel.angular.z = 0
         #while not rospy.is_shutdown():  # uncomment to use while loop
-        for i in range(50):
+        for i in range(forward_range):
             self.vel_pub.publish(vel)
             self.rate.sleep()
 
